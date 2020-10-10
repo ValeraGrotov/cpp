@@ -57,10 +57,10 @@ int main() {
             phi_rad = acos (x / r);
             phi_grad = phi_rad * (180 / M_PI);
             
-            printf("\nОТВЕТ:");
-            printf("\n      Полярный радиус равен: %f", r);
-            printf("\n      Полярный угол равен (в радианах): %f", phi_rad);
-            printf("\n      Полярный угол равен (в градусах): %f", phi_grad);
+            printf("\n ОТВЕТ:");
+            printf("\n       Полярный радиус равен: %f", r);
+            printf("\n       Полярный угол равен (в радианах): %f", phi_rad);
+            printf("\n       Полярный угол равен (в градусах): %f", phi_grad);
 
         } 
 
@@ -79,8 +79,8 @@ int main() {
             y = r * sin(phi_rad);
 
             
-            printf("\nОТВЕТ:");
-            printf("\n      X: %f \n      Y: %f \n", x, y);
+            printf("\n ОТВЕТ:");
+            printf("\n       X: %f \n       Y: %f \n", x, y);
 
         } else if (command == 3) {            
             break;
