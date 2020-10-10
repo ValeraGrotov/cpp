@@ -32,7 +32,7 @@ int main() {
             scanf_s("%i", &command);
           
             if ((command == 1) || (command == 2) || (command == 3)) {            
-                //system("clear");
+                //system("cls");
                 break; // Все хорошо, пользователь ввел 1, 2 или 3
             } else {
                 printf(" Выберите нужный пункт меню (1, 2 или  3): "); // Пользователь ввел другу цифру
