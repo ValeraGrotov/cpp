@@ -17,12 +17,8 @@ int main() {
             printf("Введите %i число: ", counter);
 
             scanf_s("%i", &command);
-
-            if (command == 0) {
-                if (counter == 1) {
-                    printf("Введите больше, чем 1 число");
-                    return 0;
-                }
+            
+            if (command == 0 ) {
                 break;
             } else {
                 numbers.push_back(command);
@@ -36,14 +32,19 @@ int main() {
                 counter++; // счетчик увеличиваем здесь
             }
         }
-    
+        
+        if (counter <= 2) {
+            printf("\n\nВведите 2 и более числа (чисел)\n\n");
+            continue;
+        }
+
         if (otvet == 1) {
-            printf("Верно");        
+            printf("\n\nВерно");
         } else {
-            printf("Неверно");        
+            printf("\n\nНеверно");
         }
     
-        printf("\n\nЖелаете повторить?\n\n1. Да\n2. Нет");
+        printf("\n\nЖелаете повторить?\n\n1. Да\n2. Нет\n");
         scanf_s("%i", &command);
         if (command == 1) {
             continue;
