@@ -29,14 +29,14 @@ int main() {
 
     int tempNumber;
 
-    for (int i = 0; i < numbers.size() - 1; i++) {
+    for (int index = 0; index < numbers.size() - 1; index++) {
 
-        for (int j = i + 1; j < numbers.size(); j++) {
-            if (numbers[i] > numbers[j]) {
+        for (int nextIndex = index + 1; nextIndex < numbers.size(); nextIndex++) {
+            if (numbers[index] > numbers[nextIndex]) {
                 otvet = 0;
-                tempNumber = numbers[i];
-                numbers[i] = numbers[j];
-                numbers[j] = tempNumber;
+                tempNumber = numbers[index];
+                numbers[index] = numbers[nextIndex];
+                numbers[nextIndex] = tempNumber;
             }
         }
 
