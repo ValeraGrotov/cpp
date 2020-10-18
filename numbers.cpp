@@ -16,7 +16,6 @@ int main() {
 
     while (true) {
         printf("Введите %i число: ", counter);
-        counter++;
 
         scanf_s("%i", &command);
 
@@ -24,38 +23,22 @@ int main() {
             break;
         } else {
             numbers.push_back(command);
+
+            for (int i = 0; i < counter; i++) {
+                if (numbers[i] > command) {
+                    otvet = 0;
+                }
+            }
+
+            counter++; // счетчик увеличиваем здесь
         }
     }
 
-    int tempNumber;
-
-    for (int index = 0; index < numbers.size() - 1; index++) {
-
-        for (int nextIndex = index + 1; nextIndex < numbers.size(); nextIndex++) {
-            if (numbers[index] > numbers[nextIndex]) {
-                otvet = 0;
-                tempNumber = numbers[index];
-                numbers[index] = numbers[nextIndex];
-                numbers[nextIndex] = tempNumber;
-            }
-        }
-
-    }
-
-    if (otvet == 0) {
-        printf("\nНеверно.\n\nПравильная последовательность: [");
-        for (int i = 0; i < numbers.size(); i++) {
-            printf("%i", numbers[i]);
-            if (i + 1 == numbers.size()) {
-                printf("] \n");
-            } else {
-                printf(", ");
-            }
-        }
+    if (otvet == 1) {
+        printf("Верно");        
     } else {
-        printf("\nВсе верно.\n");
+        printf("Неверно");        
     }
-    
-    printf("\n");
+
     return 0;
 }
